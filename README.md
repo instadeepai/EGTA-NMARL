@@ -64,9 +64,7 @@ actions `take` and `wait` correspond to opening and closing shut-off valves.
 
 At each time step, if the resource is not completely depleted, it regenerates according
 to the following formula:
-$$
-\mathcal{R} \gets \min\{1,\: \mathcal{R} + \Delta_\mathcal{R}\},
-$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathcal{R}&space;\gets&space;\min\{1,\:&space;\mathcal{R}&space;&plus;&space;\Delta_\mathcal{R}\}," target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\mathcal{R}&space;\gets&space;\min\{1,\:&space;\mathcal{R}&space;&plus;&space;\Delta_\mathcal{R}\}," title="\mathcal{R} \gets \min\{1,\: \mathcal{R} + \Delta_\mathcal{R}\}," /></a>
 where $\Delta_\mathcal{R} \in \left(0, 0.1\right]$ is the regeneration rate.
 A regeneration rate of 0.1, would allow agents to take selfishly at every
 time step without any chance of the resource depleting.
