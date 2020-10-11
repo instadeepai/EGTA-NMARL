@@ -1,0 +1,7 @@
+algorithm: ma2c_dial
+# learning_rate: 3e-2
+optimise:
+    batch_size: 50
+    warm_up_ratio: 0.21811084322308466
+    learning_rate_exp: -1.0
+    learning_rate_decay_exp: -0.589090308800786

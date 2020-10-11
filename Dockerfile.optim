@@ -1,0 +1,22 @@
+FROM base:latest
+
+RUN apt-get update -y
+
+RUN python -m pip install joblib==0.15.1
+RUN python -m pip install colorlog==4.1.0
+RUN python -m pip install ax-platform==0.1.9
+
+WORKDIR /tmp
+
+# install the newest version of hydra
+RUN git clone -n https://github.com/facebookresearch/hydra.git
+WORKDIR /tmp/hydra
+RUN git checkout 7edd1aa073672a0681dca0241072fe3b21e08a16
+RUN python -m pip install .
+
+# install plugins: joblib, colorlog, ax-sweeper
+RUN python -m pip install plugins/hydra_colorlog
+RUN python -m pip install plugins/hydra_ax_sweeper
+RUN python -m pip install plugins/hydra_joblib_launcher
+
+ENV OC_DISABLE_DOT_ACCESS_WARNING=1

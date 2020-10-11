@@ -1,0 +1,29 @@
+defaults:
+    - hydra/launcher: joblib
+    - hydra/job_logging: colorlog
+    - hydra/hydra_logging: colorlog
+
+# static options (they will be the same across trials)
+num_threads: 12
+env: "tragedy"
+n_agent: 4
+total_step: 5e4
+optimizer: "adam"
+lr_decay: "constant"
+override: false
+base_dir: ???
+coop_gamma: 0
+config_dir: "/wd/egta/config"
+
+# set to false to evaluate
+train: true
+
+# dynamic options (we are going to sweep over these---different values for different trials)
+seed: ???
+algorithm: ???
+regen_rate: ???
+
+# defector runs
+defectors: ???
+tag_file: ???
+runs: 1

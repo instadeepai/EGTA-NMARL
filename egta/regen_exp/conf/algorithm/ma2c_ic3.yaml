@@ -1,0 +1,7 @@
+algorithm: ma2c_ic3
+# learning_rate: 3e-3
+optimise:
+    batch_size: 50
+    warm_up_ratio: 0.13131098821759224
+    learning_rate_exp: -1.7794369459152222
+    learning_rate_decay_exp: -0.9635492563247681

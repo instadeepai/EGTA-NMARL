@@ -1,0 +1,7 @@
+algorithm: ia2c_fp
+# learning_rate: 1.35e-3
+optimise:
+    batch_size: 50
+    warm_up_ratio: 0.11079208631277035
+    learning_rate_exp: -1.8736989337213608
+    learning_rate_decay_exp: -1.2367912341524128

@@ -1,0 +1,3 @@
+xtick.minor.size     : 0.0      # minor tick size in points
+ytick.minor.size     : 0.0      # minor tick size in points
+axes.titlesize      : 14   # fontsize of the axes title

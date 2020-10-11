@@ -1,0 +1,4 @@
+hydra:
+    launcher:
+      params:
+        n_jobs: ${num_threads}

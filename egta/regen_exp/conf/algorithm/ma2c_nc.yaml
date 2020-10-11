@@ -1,0 +1,7 @@
+algorithm: ma2c_nc
+# learning_rate: 3e-2
+optimise:
+    batch_size: 50
+    warm_up_ratio: 0.3130786491529578
+    learning_rate_exp: -2.0549980454842562
+    learning_rate_decay_exp: -0.8769212292329707

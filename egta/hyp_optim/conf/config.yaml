@@ -1,0 +1,63 @@
+defaults:
+  - hydra/sweeper: ax
+  - hydra/job_logging: colorlog
+  - hydra/hydra_logging: colorlog
+
+# set up and interfacing configuration options
+env: ???
+n_agent: 4
+coop_gamma: -1
+lr_decay: "exponential"
+optimizer: "adam"
+algorithm: ???
+override: false
+total_step: 1e5
+base_dir: "/wd/optim"
+config_dir: "/wd/egta/config"
+metric: "integral" # options are "max" and "integral"
+regen_rate: 0.08125
+
+# To be optimised
+optimise:
+  batch_size: ???
+  warm_up_ratio: ???
+  learning_rate_exp: ???
+  learning_rate_decay_exp: ???
+
+hydra:
+  sweeper:
+    params:
+
+      # The following part of config is used to setup the Hydra Ax plugin and is optional
+      ax_config:
+        max_trials: 200
+
+        experiment:
+          # Default to minimize, set to false to maximize
+          minimize: false
+
+        early_stop:
+          # Number of epochs without a significant improvement from
+          # the currently known best parameters
+          # An Epoch is defined as a batch of trials executed in parallel
+          max_epochs_without_improvement: 20
+
+        params:
+          optimise.learning_rate_exp:
+            type: range
+            bounds: [-4.0, -1.0]
+
+          optimise.learning_rate_decay_exp:
+            type: range
+            bounds: [-3.0, 0.0]
+
+          optimise.warm_up_ratio:
+            type: range
+            bounds: [0.1, 0.4]
+
+          optimise.batch_size:
+            type: choice
+            values: [25, 50, 100]
+
+        client:
+          random_seed: 0

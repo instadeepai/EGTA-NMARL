@@ -1,0 +1,7 @@
+algorithm: ia2c_ind
+# learning_rate: 6e-2
+optimise:
+    batch_size: 25
+    warm_up_ratio: 0.4
+    learning_rate_exp: -1.7605050294551932
+    learning_rate_decay_exp: -1.7311271486850255
