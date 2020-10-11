@@ -15,7 +15,7 @@ contributions (see the paper).
 Our analysis consists of several steps:
 1. Training agents.
 2. Evaluating individual agent's restraint.
-3. Tagging agents as cooperative/defective.
+3. Tagging agents as cooperating/defecting.
 4. Evaluating the performance of algorithms while varying the ratio of cooperators to defectors.
 5. Plotting Schelling diagrams.
 
