@@ -191,9 +191,9 @@ parameter affects the level of cooperation between agents by sharing rewards.
 The reward seen by each agent at each time step is the weighted combination
 of its own reward with those of its neighbors, calculated as follows:
 <a href="https://www.codecogs.com/eqnedit.php?latex=r_{coop}&space;=&space;r_i&space;&plus;&space;\sum_{j\in\mathcal{N}_i}&space;\alpha&space;\,&space;r_j," target="_blank"><img src="https://latex.codecogs.com/png.latex?r_{coop}&space;=&space;r_i&space;&plus;&space;\sum_{j\in\mathcal{N}_i}&space;\alpha&space;\,&space;r_j," title="r_{coop} = r_i + \sum_{j\in\mathcal{N}_i} \alpha \, r_j," /></a>
-where $\mathcal{N}_i$ is the adjacency list of agent $i$ in the communication
+where <a href="https://www.codecogs.com/eqnedit.php?latex=\mathcal{N}_i" target="_blank"><img src="https://latex.codecogs.com/png.latex?\mathcal{N}_i" title="\mathcal{N}_i" /></a> is the adjacency list of agent $i$ in the communication
 graph. Negative values of  <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a> are equivalent to <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha&space;=&space;1" title="\alpha = 1" /></a>. Since
-$\alpha$ affects the magnitude of the rewards seen by each agent, reward
+<a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a> affects the magnitude of the rewards seen by each agent, reward
 normalization need to be set independently for each value of  <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a>. The
 normalization should be set so that each agent typically sees a reward of
 order 1. This translates to the following:
