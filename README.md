@@ -111,8 +111,8 @@ ___
 
 ## Analysis Pipeline
 
-<img src="figures/coop_defect.png" alt="coop" height=250>
-<img src="figures/ssd.png" alt="coop" height=250>
+<img src="figures/coop_defect.png" alt="coop" height=200>
+<img src="figures/ssd.png" alt="coop" height=200>
 
 ### Train Agents
 
@@ -180,7 +180,7 @@ Using the processed data, a Schelling diagram can be plot for each algorithm by 
 ```
 make plot_schelling_diagrams
 ```
-<img src="figures/nsi.png" alt="schelling" height="250"/>
+<img src="figures/ssd.png" alt="schelling" height="250"/>
 
 ### Setting the Connected Neighbourhood Reward Weighting Factor
 
