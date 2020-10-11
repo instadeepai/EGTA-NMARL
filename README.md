@@ -112,7 +112,7 @@ ___
 ## Analysis Pipeline
 
 <img src="figures/coop_defect.png" alt="coop" height=250>
-<img src="figures/nsi.png" alt="coop" height=250>
+<img src="figures/ssd.png" alt="coop" height=250>
 
 ### Train Agents
 
