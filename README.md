@@ -65,7 +65,7 @@ actions `take` and `wait` correspond to opening and closing shut-off valves.
 At each time step, if the resource is not completely depleted, it regenerates according
 to the following formula:
 <a href="https://www.codecogs.com/eqnedit.php?latex=\inline&space;\mathcal{R}&space;\gets&space;\min\{1,\:&space;\mathcal{R}&space;&plus;&space;\Delta_\mathcal{R}\}," target="_blank"><img src="https://latex.codecogs.com/png.latex?\inline&space;\mathcal{R}&space;\gets&space;\min\{1,\:&space;\mathcal{R}&space;&plus;&space;\Delta_\mathcal{R}\}," title="\mathcal{R} \gets \min\{1,\: \mathcal{R} + \Delta_\mathcal{R}\}," /></a>
-where $\Delta_\mathcal{R} \in \left(0, 0.1\right]$ is the regeneration rate.
+where <a href="https://www.codecogs.com/eqnedit.php?latex=\Delta_\mathcal{R}&space;\in&space;\left(0,&space;0.1\right]" target="_blank"><img src="https://latex.codecogs.com/png.latex?\Delta_\mathcal{R}&space;\in&space;\left(0,&space;0.1\right]" title="\Delta_\mathcal{R} \in \left(0, 0.1\right]" /></a> is the regeneration rate.
 A regeneration rate of 0.1, would allow agents to take selfishly at every
 time step without any chance of the resource depleting.
 
@@ -185,28 +185,26 @@ make plot_schelling_diagrams
 
 ### Setting the Connected Neighbourhood Reward Weighting Factor
 
-In our paper, we discuss a connected neighbourhood reward weighting factor $\alpha$. In the code this
+In our paper, we discuss a connected neighbourhood reward weighting factor <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a>. In the code this
 is referred to as `coop_gamma`, as it was in the original NMARL code. This
 parameter affects the level of cooperation between agents by sharing rewards.
 The reward seen by each agent at each time step is the weighted combination
 of its own reward with those of its neighbors, calculated as follows:
-$$
-r_{coop} = r_i + \sum_{j\in\mathcal{N}_i} \alpha \, r_j,
-$$
+<a href="https://www.codecogs.com/eqnedit.php?latex=r_{coop}&space;=&space;r_i&space;&plus;&space;\sum_{j\in\mathcal{N}_i}&space;\alpha&space;\,&space;r_j," target="_blank"><img src="https://latex.codecogs.com/png.latex?r_{coop}&space;=&space;r_i&space;&plus;&space;\sum_{j\in\mathcal{N}_i}&space;\alpha&space;\,&space;r_j," title="r_{coop} = r_i + \sum_{j\in\mathcal{N}_i} \alpha \, r_j," /></a>
 where $\mathcal{N}_i$ is the adjacency list of agent $i$ in the communication
-graph. Negative values of $\alpha$ are equivalent to $\alpha = 1$. Since
+graph. Negative values of  <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a> are equivalent to <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha&space;=&space;1" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha&space;=&space;1" title="\alpha = 1" /></a>. Since
 $\alpha$ affects the magnitude of the rewards seen by each agent, reward
-normalization need to be set independently for each value of $\alpha$. The
+normalization need to be set independently for each value of  <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a>. The
 normalization should be set so that each agent typically sees a reward of
 order 1. This translates to the following:
 
-| $\alpha$ | `reward_norm` |
+| <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a> | `reward_norm` |
 | :------: | :-----------: |
 |    0     |     0.025     |
 |   0.1    |    0.0325     |
 |    1     |      0.1      |
 
-The value of $\alpha$ can be set in
+The value of <a href="https://www.codecogs.com/eqnedit.php?latex=\alpha" target="_blank"><img src="https://latex.codecogs.com/png.latex?\alpha" title="\alpha" /></a> can be set in
 [config.yaml](egta/regen_exp/conf/config.yaml) under the name
 `coop_gamma`, and `reward_norm` can be set in each of the config files found in
 [egta/config/](egta/config/)
